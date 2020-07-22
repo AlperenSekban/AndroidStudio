@@ -1,0 +1,13 @@
+//Fragmentlar arası geçiş yapmak için kullanabiliriz.
+//Fonksiyonumuzu MainActivity içine yazıp bğtğn fragmentlar üzerinden erişim sağlayabiliriz.
+//Bulunduğumuz fragment içinden çağırıp gitmek istediğimiz fragment'i nesne olarak göndermeliyiz.
+//Bu sayede açık olan fragment kapatılacak ve başlatmak istediğimiz fragment açılacaktır.
+
+public void changeFragment(Context context, Fragment fragment, String tag){
+        ((FragmentActivity) context).getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_main_frameLayout,fragment,tag)
+                .setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
+
+
+}
