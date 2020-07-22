@@ -1,6 +1,9 @@
+//Aynı radiogroup içinde var olan radiobuttonlardan herhangi birinin seçili olup olmadığını bilmemiz için kullanabiliriz.
+//Herhangi bir form ekranında sunduğumuz tercihlerin en az bir tanesinin seçili olup olmadığını kontrol etmek için işimize yarar.
+
 public boolean isSelected(RadioGroup radioGroup){
-     if (radioGroup.getCheckedRadioButtonId()==-1){
-         return false;
+     if (radioGroup.getCheckedRadioButtonId()==-1){    //Seçili bir radiobuttton yok ise default değer olan -1'i bize döndürecektir.
+         return false;                                 //Seçili bir radiobutton var ise o radiobuttona ait idyi bize döndürecektir. 
      }
      else{
          return true;
